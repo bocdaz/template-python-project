@@ -7,8 +7,13 @@ The repo is meant to be used as a jumping off point for new python development. 
 
 ## Using this template
 
-Click the green "Use this template" button on the GitHub UI to create a new repository based off of this one.
+If you don't yet have [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/index.html), install it with `pip install cookiecutter`.
 
+Then run:
+
+```bash
+cookiecutter https://fcp4agithdp01.bocad.bank-banque-canada.ca/aecurrency/template-python-project.git --checkout cookiecutter
+```
 ### Prerequisites
 - [Poetry](https://python-poetry.org/), install it with `pip install --user poetry`.
 
@@ -17,7 +22,7 @@ Click the green "Use this template" button on the GitHub UI to create a new repo
 2. Install precommit
 
     ```bash
-    pip install --user --upgrade pre-commit
+    pip install --user --upgrade nox pre-commit
     ```
 
 3. Run `pre-commit install`
@@ -83,17 +88,13 @@ Definitely not! This repo came about from a desire to have a simple way to setup
 |[flake8-bandit](https://pypi.org/project/flake8-bandit/)|[Bandit](https://bandit.readthedocs.io/en/latest/) is a tool designed to find common security issues in Python code.|
 |[flake8-black](https://github.com/peterjc/flake8-black)|This is an MIT licensed [flake8](https://github.com/pycqa/flake8) plugin for validating Python code style with the command line code formatting tool [black](https://github.com/psf/black).|
 |[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)|A plugin for Flake8 finding likely bugs and design problems in your program.|
-|[flake8-comprehensions](https://github.com/adamchainz/flake8-comprehensions)|A flake8 plugin that helps you write better list/set/dict comprehensions.|
 |[flake8-docstrings](https://github.com/PyCQA/flake8-docstrings)|A simple module that adds an extension for the fantastic [pydocstyle](https://github.com/pycqa/pydocstyle) tool to [flake8](https://github.com/pycqa/flake8).|
 |[isort](https://pycqa.github.io/isort/)|isort is a Python utility / library to sort imports alphabetically, and automatically separated into sections and by type.|
 |[nox](https://nox.thea.codes/en/stable/)|`nox` is a command-line tool that automates testing in multiple Python environments, similar to [tox](https://tox.readthedocs.org/).|
-|[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)|MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.|
-|[pep8-naming](https://github.com/PyCQA/pep8-naming)|Check your code against PEP 8 naming conventions. This module provides a plugin for flake8, the Python code checker.|
 |[poetry](https://python-poetry.org/)|Poetry helps you declare, manage and install dependencies of Python projects, ensuring you have the right stack everywhere.|
 |[pre-commit](https://pre-commit.com/)|A framework for managing and maintaining multi-language pre-commit hooks.|
 |[pytest](https://docs.pytest.org/)|The pytest framework makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries.|
 |[pytest-cov](https://github.com/pytest-dev/pytest-cov)|This pytest plugin produces test coverage reports.|
 |[pytest-mock](https://github.com/pytest-dev/pytest-mock/)|This pytest plugin provides a `mocker` fixture which is a thin-wrapper around the patching API provided by the [mock](https://docs.python.org/dev/library/unittest.mock.html) package.|
-|[rope](https://github.com/python-rope/rope)|Rope is a python refactoring library.|
 |[safety](https://pyup.io/safety/)|Safety checks your dependencies for known security vulnerabilities.|
 |[xdoctest](https://github.com/Erotemic/xdoctest)|The `xdoctest` package is a re-write of Python's builtin `doctest` module.|
