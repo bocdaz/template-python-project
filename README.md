@@ -97,3 +97,5 @@ Definitely not! This repo came about from a desire to have a simple way to setup
 |[rope](https://github.com/python-rope/rope)|Rope is a python refactoring library.|
 |[safety](https://pyup.io/safety/)|Safety checks your dependencies for known security vulnerabilities.|
 |[xdoctest](https://github.com/Erotemic/xdoctest)|The `xdoctest` package is a re-write of Python's builtin `doctest` module.|
+
+[![CI - nox sessions](https://github.com/bocdaz/template-python-project/actions/workflows/ci.yaml/badge.svg)](https://github.com/bocdaz/template-python-project/actions/workflows/ci.yaml)
