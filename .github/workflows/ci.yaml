@@ -48,7 +48,8 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Setup flake8 annotations
-        uses: rbialon/flake8-annotations@v1
+        # uses: rbialon/flake8-annotations@v1
+        uses: reviewdog/action-setup@v1
           
       - name: Run unit tests
         run: poetry run nox -rs tests
