@@ -46,6 +46,10 @@ jobs:
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction
+
+      - name: Setup flake8 annotations
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: rbialon/flake8-annotations@v1
           
       - name: Run unit tests
         run: poetry run nox -rs tests
