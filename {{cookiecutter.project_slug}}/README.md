@@ -17,7 +17,12 @@
 
 ### Getting Started
 1. Run `poetry shell`
-2. Start adding new python files to `src` and new tests to `tests`
+2. Modify the project name and authors in [pyproject.toml](./pyproject.toml)
+3. Start adding new python files to [src](./src) and new tests to [tests](./tests)
+4. (Optional) If using DevSpace:
+    * Run `devspace use context` to select the proper cluster.
+	* Run `devspace use namespace my-namespace` to select the namespace to use.
+	* Start your project in development mode with `devspace dev`.
 
 ### Running Dev Tools
 1. Change to the base directory
