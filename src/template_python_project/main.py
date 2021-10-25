@@ -2,6 +2,7 @@
 
 
 def hi():
+    """Say hi in the terminal."""
     print("Hi from main.py!")
 
 
