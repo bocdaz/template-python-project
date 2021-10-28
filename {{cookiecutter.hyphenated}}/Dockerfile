@@ -15,4 +15,4 @@ EXPOSE 8080
 
 # Container start command
 # It is also possible to override this in devspace.yaml via images.*.cmd
-CMD ["poetry", "run", "python", "src/{{cookiecutter.project_slug}}/main.py"]
+CMD ["poetry", "run", "python", "src/{{cookiecutter.underscored}}/main.py"]

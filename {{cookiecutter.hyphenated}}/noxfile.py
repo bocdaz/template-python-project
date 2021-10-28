@@ -5,7 +5,7 @@ from pathlib import Path
 
 import nox
 
-package = "{{cookiecutter.project_slug}}"
+package = "{{cookiecutter.underscored}}"
 nox.options.sessions = "lint", "safety", "tests"
 locations = "src", "tests", "noxfile.py"
 
@@ -55,7 +55,9 @@ def lint(session):
         "flake8-bandit",
         "flake8-black",
         "flake8-bugbear",
+        "flake8-comprehensions",
         "flake8-docstrings",
+        "flake8-import-order"
     )
     session.run("isort", "--check", "--diff", "--profile", "black", *args)
     session.run("flake8", *args)
@@ -95,7 +97,12 @@ def tests(session):
     args = session.posargs or ["--cov"]
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(
-        session, "coverage[toml]", "pytest", "pytest-cov", "pytest-mock"
+        session,
+        "coverage[toml]",
+        "pytest",
+        "pytest-cov",
+        "pytest-mock",
+{% if cookiecutter.project_type == 'FastAPI application' %}        "requests",{% endif %}
     )
     session.run("pytest", *args)
 

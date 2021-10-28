@@ -7,7 +7,7 @@ vars:
 
 # `deployments` tells DevSpace how to deploy this project
 deployments:
-- name: "{{ cookiecutter.project_slug.replace('_', '-') }}",
+- name: "{{ cookiecutter.hyphenated }}",
   # This deployment uses `helm` but you can also define `kubectl` deployments or kustomizations
   helm:
     # We are deploying the so-called Component Chart: https://devspace.sh/component-chart/docs
@@ -19,7 +19,7 @@ deployments:
       - image: ${IMAGE} # Use the value of our `${IMAGE}` variable here (see vars above)
       service:
         ports:
-        - port: 8080
+        - port: 8000
 
 # `dev` only applies when you run `devspace dev`
 dev:
@@ -28,12 +28,12 @@ dev:
   ports:
   - imageSelector: ${IMAGE} # Select the Pod that runs our `${IMAGE}`
     forward:
-    - port: 8080
+    - port: 8000
 
   # `dev.open` tells DevSpace to open certain URLs as soon as they return HTTP status 200
   # Since we configured port-forwarding, we can use a localhost address here to access our application
   open:
-  - url: http://localhost:8080
+  - url: http://localhost:8000
 
   # `dev.sync` configures a file sync between our Pods in k8s and your local project files
   sync:
