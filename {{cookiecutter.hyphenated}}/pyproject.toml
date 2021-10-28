@@ -6,7 +6,7 @@ readme = "README.md"
 version = "{{ cookiecutter.version }}"
 {% if cookiecutter.project_type == 'FastAPI application' %}
 [tool.poetry.scripts]
-dev = "{{cookiecutter.underscored}}main:dev_start"
+dev = "{{cookiecutter.underscored}}.main:dev_start"
 {% endif %}
 [tool.poetry.dependencies]
 python = "^3.6"
