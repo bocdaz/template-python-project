@@ -12,7 +12,7 @@ If you don't yet have [cookiecutter](https://cookiecutter.readthedocs.io/en/late
 Then run:
 
 ```bash
-cookiecutter https://fcp4agithdp01.bocad.bank-banque-canada.ca/aecurrency/template-python-project.git --checkout cookiecutter
+cookiecutter https://github.com/bocdaz/template-python-project/template-python-project.git
 ```
 ### Prerequisites
 - [Poetry](https://python-poetry.org/), install it with `pip install --user poetry`.
@@ -56,11 +56,11 @@ poetry run ___.py
 
 #### I ran into an issue, what should I do?
 
-Feel free to [file an issue](https://fcp4agithdp01.bocad.bank-banque-canada.ca/aecurrency/template-python-project/issues), including as much relevant info and screenshots if that helps explain things. Then, the team will be able to diagnose your issue and help resolve it.
+Feel free to [file an issue](https://github.com/bocdaz/template-python-project/issues), including as much relevant info and screenshots if that helps explain things. Then, the team will be able to diagnose your issue and help resolve it.
 
 #### What about including <insert tool here> in this repository?
 
-We're always open to improvements, no matter how small! To suggest a change to this project template, [open an issue](https://fcp4agithdp01.bocad.bank-banque-canada.ca/aecurrency/template-python-project/issues) and the team will be able to discuss whether to include the tool, and if so, how. If you have a suggestion on how to incorporate the tool as well, feel free to [create a PR](https://fcp4agithdp01.bocad.bank-banque-canada.ca/aecurrency/template-python-project/pulls) with the change, and reference it in your issue. That would make it even easier for the team to consider the change.
+We're always open to improvements, no matter how small! To suggest a change to this project template, [open an issue](hhttps://github.com/bocdaz/template-python-project/issues) and the team will be able to discuss whether to include the tool, and if so, how. If you have a suggestion on how to incorporate the tool as well, feel free to [create a PR](https://github.com/bocdaz/template-python-project/pulls) with the change, and reference it in your issue. That would make it even easier for the team to consider the change.
 
 #### I'm starting a python project, do I _have_ to use this repo as a starting point?
 
