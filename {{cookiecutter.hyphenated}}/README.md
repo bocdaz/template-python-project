@@ -1,19 +1,7 @@
-# A Starter Project Template for Python
+# {{cookiecutter.project_name}}
 
-The repo is meant to be used as a jumping off point for new python development. It comes with the following:
+## Dev Setup
 
-* Pre-commit hooks for [black](https://github.com/psf/black) and [flake8](https://flake8.pycqa.org/en/latest/) so that you can conform to [the team's styleguide](https://itswiki.bank-banque-canada.ca/display/AECUR/Python+coding+conventions) without even breaking a sweat.
-* A pre-configured `pyproject.toml` with [Poetry](https://python-poetry.org/) so that you can quickly setup a new, isolated virtual environment for your python development. No fuss, no muss!
-
-## Using this template
-
-If you don't yet have [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/index.html), install it with `pip install cookiecutter`.
-
-Then run:
-
-```bash
-cookiecutter https://github.com/bocdaz/template-python-project/template-python-project.git
-```
 ### Prerequisites
 - [Poetry](https://python-poetry.org/), install it with `pip install --user poetry`.
 
@@ -30,7 +18,11 @@ cookiecutter https://github.com/bocdaz/template-python-project/template-python-p
 ### Getting Started
 1. Run `poetry shell`
 2. Modify the project name and authors in [pyproject.toml](./pyproject.toml)
-3. Start adding new python files to [src](./src)
+3. Start adding new python files to [src](./src) and new tests to [tests](./tests)
+4. (Optional) If using DevSpace:
+    * Run `devspace use context` to select the proper cluster.
+	* Run `devspace use namespace my-namespace` to select the namespace to use.
+	* Start your project in development mode with `devspace dev`.
 
 ### Running Dev Tools
 1. Change to the base directory
@@ -40,6 +32,7 @@ cookiecutter https://github.com/bocdaz/template-python-project/template-python-p
   - Use `nox -rs safety` to run security checks
   - Use `nox -rs tests` to run test suites
   - Use `nox -rs black` to run the formatter
+
 
 ## FAQ
 
@@ -53,18 +46,6 @@ poetry run ___.py
 #### How do I install new libraries to my project?
 
 `poetry add ___`
-
-#### I ran into an issue, what should I do?
-
-Feel free to [file an issue](https://github.com/bocdaz/template-python-project/issues), including as much relevant info and screenshots if that helps explain things. Then, the team will be able to diagnose your issue and help resolve it.
-
-#### What about including <insert tool here> in this repository?
-
-We're always open to improvements, no matter how small! To suggest a change to this project template, [open an issue](https://github.com/bocdaz/template-python-project/issues) and the team will be able to discuss whether to include the tool, and if so, how. If you have a suggestion on how to incorporate the tool as well, feel free to [create a PR](https://github.com/bocdaz/template-python-project/pulls) with the change, and reference it in your issue. That would make it even easier for the team to consider the change.
-
-#### I'm starting a python project, do I _have_ to use this repo as a starting point?
-
-Definitely not! This repo came about from a desire to have a simple way to setup the tools our team uses for python development. But you're absolutely free to configure the tools to work on your project without using this repository as a starting point.
 
 ## Useful Resources
 
