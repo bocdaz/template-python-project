@@ -9,5 +9,8 @@
 		"FastAPI application",
 		"Python package"
 	],
-	"version": "0.1.0"
+	"version": "0.1.0",
+	"_copy_without_render": [
+          "*.github/workflows/*",
+        ]
 }
