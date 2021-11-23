@@ -1,7 +1,7 @@
 [tool.poetry]
 authors = ["{{ cookiecutter.full_name.replace('\"', '\\\"') }} <{{ cookiecutter.email }}>"]
 description = "Top-level package for {{ cookiecutter.project_name }}."
-name = "{{cookiecutter.underscored}}"
+name = "{{cookiecutter.hyphenated}}"
 readme = "README.md"
 version = "{{ cookiecutter.version }}"
 {% if cookiecutter.project_type == 'FastAPI application' %}
