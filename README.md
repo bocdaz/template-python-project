@@ -1,36 +1,29 @@
-# A Starter Project Template for Python
+# Python cookiecutter template
 
-The repo is meant to be used as a jumping off point for new python development. It comes with the following:
+[![CI - nox sessions](https://github.com/bocdaz/template-python-project/actions/workflows/ci.yaml/badge.svg)](https://github.com/bocdaz/template-python-project/actions/workflows/ci.yaml)
 
-* Pre-commit hooks for [black](https://github.com/psf/black) and [flake8](https://flake8.pycqa.org/en/latest/) so that you can conform to [the team's styleguide](https://itswiki.bank-banque-canada.ca/display/AECUR/Python+coding+conventions) without even breaking a sweat.
-* A pre-configured `pyproject.toml` with [Poetry](https://python-poetry.org/) so that you can quickly setup a new, isolated virtual environment for your python development. No fuss, no muss!
+Opinionated cookiecutter template for creating a new Python program, or [FastAPI](https://fastapi.tiangolo.com/) application.
 
-## Using this template
+Use this template on your own machine with cookiecutter, or create a brand new repository based on this template entirely through the GitHub web interface using either:
 
-If you don't yet have [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/index.html), install it with `pip install cookiecutter`.
+- [python-project-template-repository](https://github.com/bocdaz/python-project-template-repository)
+- [fastapi-app-template-repository](https://github.com/bocdaz/fastapi-app-template-repository)
 
-Then run:
+## Manual installation
 
-```bash
-cookiecutter https://github.com/bocdaz/template-python-project/template-python-project.git
-```
-### Prerequisites
-- [Poetry](https://python-poetry.org/), install it with `pip install --user poetry`.
+You'll need to have [cookiecutter](https://cookiecutter.readthedocs.io/), [poetry](https://python-poetry.org/) and [pre-commit](https://pre-commit.com/) installed.
 
-### Installation
-1. Run `poetry install`
-2. Install precommit
-
-    ```bash
-    pip install --user --upgrade nox pre-commit
-    ```
-
-3. Run `pre-commit install`
+Run `cookiecutter gh:bocdaz/template-python-project` and then answer the prompts.
 
 ### Getting Started
 1. Run `poetry shell`
 2. Modify the project name and authors in [pyproject.toml](./pyproject.toml)
 3. Start adding new python files to [src](./src)
+4. (Optional) If using DevSpace:
+    * Run `devspace use context` to select the proper cluster.
+    * Run `devspace use namespace my-namespace` to select the namespace to use.
+    * Start your project in development mode with `devspace dev`.
+
 
 ### Running Dev Tools
 1. Change to the base directory
@@ -56,11 +49,11 @@ poetry run ___.py
 
 #### I ran into an issue, what should I do?
 
-Feel free to [file an issue](https://github.com/bocdaz/template-python-project/issues), including as much relevant info and screenshots if that helps explain things. Then, the team will be able to diagnose your issue and help resolve it.
+Feel free to [file an issue](https://github.com/bocdaz/template-python-project/issues), including as much relevant info and screenshots if that helps explain things. Then, the community will be able to diagnose your issue and help resolve it.
 
 #### What about including <insert tool here> in this repository?
 
-We're always open to improvements, no matter how small! To suggest a change to this project template, [open an issue](https://github.com/bocdaz/template-python-project/issues) and the team will be able to discuss whether to include the tool, and if so, how. If you have a suggestion on how to incorporate the tool as well, feel free to [create a PR](https://github.com/bocdaz/template-python-project/pulls) with the change, and reference it in your issue. That would make it even easier for the team to consider the change.
+We're always open to improvements, no matter how small! To suggest a change to this project template, [open an issue](https://github.com/bocdaz/template-python-project/issues) and the community will be able to discuss whether to include the tool, and if so, how. If you have a suggestion on how to incorporate the tool as well, feel free to [create a PR](https://github.com/bocdaz/template-python-project/pulls) with the change, and reference it in your issue. That would make it even easier for the community to consider the change.
 
 #### I'm starting a python project, do I _have_ to use this repo as a starting point?
 
@@ -88,13 +81,17 @@ Definitely not! This repo came about from a desire to have a simple way to setup
 |[flake8-bandit](https://pypi.org/project/flake8-bandit/)|[Bandit](https://bandit.readthedocs.io/en/latest/) is a tool designed to find common security issues in Python code.|
 |[flake8-black](https://github.com/peterjc/flake8-black)|This is an MIT licensed [flake8](https://github.com/pycqa/flake8) plugin for validating Python code style with the command line code formatting tool [black](https://github.com/psf/black).|
 |[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)|A plugin for Flake8 finding likely bugs and design problems in your program.|
+|[flake8-comprehensions](https://github.com/adamchainz/flake8-comprehensions)|A flake8 plugin that helps you write better list/set/dict comprehensions.|
 |[flake8-docstrings](https://github.com/PyCQA/flake8-docstrings)|A simple module that adds an extension for the fantastic [pydocstyle](https://github.com/pycqa/pydocstyle) tool to [flake8](https://github.com/pycqa/flake8).|
 |[isort](https://pycqa.github.io/isort/)|isort is a Python utility / library to sort imports alphabetically, and automatically separated into sections and by type.|
 |[nox](https://nox.thea.codes/en/stable/)|`nox` is a command-line tool that automates testing in multiple Python environments, similar to [tox](https://tox.readthedocs.org/).|
+|[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)|MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.|
+|[pep8-naming](https://github.com/PyCQA/pep8-naming)|Check your code against PEP 8 naming conventions. This module provides a plugin for flake8, the Python code checker.|
 |[poetry](https://python-poetry.org/)|Poetry helps you declare, manage and install dependencies of Python projects, ensuring you have the right stack everywhere.|
 |[pre-commit](https://pre-commit.com/)|A framework for managing and maintaining multi-language pre-commit hooks.|
 |[pytest](https://docs.pytest.org/)|The pytest framework makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries.|
 |[pytest-cov](https://github.com/pytest-dev/pytest-cov)|This pytest plugin produces test coverage reports.|
 |[pytest-mock](https://github.com/pytest-dev/pytest-mock/)|This pytest plugin provides a `mocker` fixture which is a thin-wrapper around the patching API provided by the [mock](https://docs.python.org/dev/library/unittest.mock.html) package.|
+|[rope](https://github.com/python-rope/rope)|Rope is a python refactoring library.|
 |[safety](https://pyup.io/safety/)|Safety checks your dependencies for known security vulnerabilities.|
 |[xdoctest](https://github.com/Erotemic/xdoctest)|The `xdoctest` package is a re-write of Python's builtin `doctest` module.|
