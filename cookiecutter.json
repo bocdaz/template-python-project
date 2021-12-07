@@ -1,0 +1,16 @@
+{
+	"full_name": "First Last",
+	"email": "user@bank-banque-canada.ca",
+	"project_name": "Template Python Project",
+	"hyphenated": "{{ '-'.join(cookiecutter['project_name'].lower().split()).replace('_', '-') }}",
+	"underscored": "{{ cookiecutter.hyphenated.replace('-', '_') }}",
+	"project_short_description": "A Starter Project Template for Python.",
+	"project_type": [
+		"FastAPI application",
+		"Python package"
+	],
+	"version": "0.1.0",
+	"_copy_without_render": [
+		"*.github/workflows/*"
+	]
+}

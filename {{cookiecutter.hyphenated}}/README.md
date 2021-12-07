@@ -1,29 +1,28 @@
-# Python cookiecutter template
+# {{cookiecutter.project_name}}
 
-[![CI - nox sessions](https://github.com/bocdaz/template-python-project/actions/workflows/ci.yaml/badge.svg)](https://github.com/bocdaz/template-python-project/actions/workflows/ci.yaml)
+## Dev Setup
 
-Opinionated cookiecutter template for creating a new Python program, or [FastAPI](https://fastapi.tiangolo.com/) application.
+### Prerequisites
+- [Poetry](https://python-poetry.org/), install it with `pip install --user poetry`.
 
-Use this template on your own machine with cookiecutter, or create a brand new repository based on this template entirely through the GitHub web interface using either:
+### Installation
+1. Run `poetry install`
+2. Install precommit
 
-- [python-project-template-repository](https://github.com/bocdaz/python-project-template-repository)
-- [fastapi-app-template-repository](https://github.com/bocdaz/fastapi-app-template-repository)
+    ```bash
+    pip install --user --upgrade nox pre-commit
+    ```
 
-## Manual installation
-
-You'll need to have [cookiecutter](https://cookiecutter.readthedocs.io/), [poetry](https://python-poetry.org/) and [pre-commit](https://pre-commit.com/) installed.
-
-Run `cookiecutter gh:bocdaz/template-python-project` and then answer the prompts.
+3. Run `pre-commit install`
 
 ### Getting Started
 1. Run `poetry shell`
 2. Modify the project name and authors in [pyproject.toml](./pyproject.toml)
-3. Start adding new python files to [src](./src)
+3. Start adding new python files to [src](./src) and new tests to [tests](./tests)
 4. (Optional) If using DevSpace:
     * Run `devspace use context` to select the proper cluster.
-    * Run `devspace use namespace my-namespace` to select the namespace to use.
-    * Start your project in development mode with `devspace dev`.
-
+	* Run `devspace use namespace my-namespace` to select the namespace to use.
+	* Start your project in development mode with `devspace dev`.
 
 ### Running Dev Tools
 1. Change to the base directory
@@ -33,6 +32,7 @@ Run `cookiecutter gh:bocdaz/template-python-project` and then answer the prompts
   - Use `nox -rs safety` to run security checks
   - Use `nox -rs tests` to run test suites
   - Use `nox -rs black` to run the formatter
+
 
 ## FAQ
 
@@ -46,18 +46,6 @@ poetry run ___.py
 #### How do I install new libraries to my project?
 
 `poetry add ___`
-
-#### I ran into an issue, what should I do?
-
-Feel free to [file an issue](https://github.com/bocdaz/template-python-project/issues), including as much relevant info and screenshots if that helps explain things. Then, the community will be able to diagnose your issue and help resolve it.
-
-#### What about including <insert tool here> in this repository?
-
-We're always open to improvements, no matter how small! To suggest a change to this project template, [open an issue](https://github.com/bocdaz/template-python-project/issues) and the community will be able to discuss whether to include the tool, and if so, how. If you have a suggestion on how to incorporate the tool as well, feel free to [create a PR](https://github.com/bocdaz/template-python-project/pulls) with the change, and reference it in your issue. That would make it even easier for the community to consider the change.
-
-#### I'm starting a python project, do I _have_ to use this repo as a starting point?
-
-Definitely not! This repo came about from a desire to have a simple way to setup the tools our team uses for python development. But you're absolutely free to configure the tools to work on your project without using this repository as a starting point.
 
 ## Useful Resources
 
@@ -81,17 +69,13 @@ Definitely not! This repo came about from a desire to have a simple way to setup
 |[flake8-bandit](https://pypi.org/project/flake8-bandit/)|[Bandit](https://bandit.readthedocs.io/en/latest/) is a tool designed to find common security issues in Python code.|
 |[flake8-black](https://github.com/peterjc/flake8-black)|This is an MIT licensed [flake8](https://github.com/pycqa/flake8) plugin for validating Python code style with the command line code formatting tool [black](https://github.com/psf/black).|
 |[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)|A plugin for Flake8 finding likely bugs and design problems in your program.|
-|[flake8-comprehensions](https://github.com/adamchainz/flake8-comprehensions)|A flake8 plugin that helps you write better list/set/dict comprehensions.|
 |[flake8-docstrings](https://github.com/PyCQA/flake8-docstrings)|A simple module that adds an extension for the fantastic [pydocstyle](https://github.com/pycqa/pydocstyle) tool to [flake8](https://github.com/pycqa/flake8).|
 |[isort](https://pycqa.github.io/isort/)|isort is a Python utility / library to sort imports alphabetically, and automatically separated into sections and by type.|
 |[nox](https://nox.thea.codes/en/stable/)|`nox` is a command-line tool that automates testing in multiple Python environments, similar to [tox](https://tox.readthedocs.org/).|
-|[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)|MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.|
-|[pep8-naming](https://github.com/PyCQA/pep8-naming)|Check your code against PEP 8 naming conventions. This module provides a plugin for flake8, the Python code checker.|
 |[poetry](https://python-poetry.org/)|Poetry helps you declare, manage and install dependencies of Python projects, ensuring you have the right stack everywhere.|
 |[pre-commit](https://pre-commit.com/)|A framework for managing and maintaining multi-language pre-commit hooks.|
 |[pytest](https://docs.pytest.org/)|The pytest framework makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries.|
 |[pytest-cov](https://github.com/pytest-dev/pytest-cov)|This pytest plugin produces test coverage reports.|
 |[pytest-mock](https://github.com/pytest-dev/pytest-mock/)|This pytest plugin provides a `mocker` fixture which is a thin-wrapper around the patching API provided by the [mock](https://docs.python.org/dev/library/unittest.mock.html) package.|
-|[rope](https://github.com/python-rope/rope)|Rope is a python refactoring library.|
 |[safety](https://pyup.io/safety/)|Safety checks your dependencies for known security vulnerabilities.|
 |[xdoctest](https://github.com/Erotemic/xdoctest)|The `xdoctest` package is a re-write of Python's builtin `doctest` module.|
