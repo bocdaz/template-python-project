@@ -11,8 +11,4 @@ Syntax:
 ## [version] - YYYY - MM - DD
 ### Added/Removed/Changed/Deprecated/Fixed/Security
 ```
-## [0.1.0] - 2021 - 12 - 09
-### Added
-- vcluster connection custom command
-
 ## [Unreleased]
