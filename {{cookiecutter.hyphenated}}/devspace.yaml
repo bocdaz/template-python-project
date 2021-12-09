@@ -7,7 +7,7 @@ vars:
 
 # `deployments` tells DevSpace how to deploy this project
 deployments:
-- name: "{{ cookiecutter.hyphenated }}",
+- name: "{{ cookiecutter.hyphenated }}"
   # This deployment uses `helm` but you can also define `kubectl` deployments or kustomizations
   helm:
     # We are deploying the so-called Component Chart: https://devspace.sh/component-chart/docs
