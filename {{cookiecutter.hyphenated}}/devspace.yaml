@@ -87,3 +87,9 @@ profiles:
       app:
         image: ${IMAGE} # Use the value of our `${IMAGE}` variable here (see vars above)
         dockerfile: ./Dockerfile
+
+# `commands` allows you to define commands in devspace.yaml and assign an alias to it
+commands:
+# Allows user to connect to their personal vcluster - uses 4 digit user and kubernetes namespace
+- name: vconnect
+  command: "NAMESPACE=$(kubectl get ns | grep `whoami` | awk '{print $1}' | head -1) ; vcluster connect $USER -n $NAMESPACE"
