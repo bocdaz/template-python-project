@@ -92,4 +92,4 @@ profiles:
 commands:
 # Allows user to connect to their personal vcluster - uses 4 digit user and kubernetes namespace
 - name: vconnect
-  command: "NAMESPACE=$(kubectl get ns | grep `whoami` | awk '{print $1}' | head -1) ; vcluster connect $USER -n $NAMESPACE"
+  command: "NAMESPACE=$(kubectl get ns | grep $USER | awk '{print $1}' | head -1) ; vcluster connect $USER -n $NAMESPACE"
