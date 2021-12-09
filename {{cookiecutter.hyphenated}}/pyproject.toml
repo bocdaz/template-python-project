@@ -1,5 +1,4 @@
 [tool.poetry]
-version = "0.1.0"
 authors = ["{{ cookiecutter.full_name.replace('\"', '\\\"') }} <{{ cookiecutter.email }}>"]
 description = "Top-level package for {{ cookiecutter.project_name }}."
 name = "{{cookiecutter.hyphenated}}"
