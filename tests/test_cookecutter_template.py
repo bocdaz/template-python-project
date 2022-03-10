@@ -70,3 +70,23 @@ def test_bake_and_run_nox(cookies, command):
         project_path = str(result.project_path)
         assert run_inside_dir("poetry install --no-interaction", project_path) == 0
         assert run_inside_dir(f"poetry run nox -rs {command}", project_path) == 0
+
+
+def test_bake_fastapi_application(cookies):
+    context = {"project_type": "FastAPI application"}
+    result = cookies.bake(extra_context=context)
+    pyproject_path = result.project_path / "pyproject.toml"
+    with pyproject_path.open("r") as pyproject_file:
+        contents = pyproject_file.read()
+        assert "fastapi" in contents
+        assert "tool.poetry.scripts" in contents
+
+
+def test_bake_python_package(cookies):
+    context = {"project_type": "Python package"}
+    result = cookies.bake(extra_context=context)
+    pyproject_path = result.project_path / "pyproject.toml"
+    with pyproject_path.open("r") as pyproject_file:
+        contents = pyproject_file.read()
+        assert "fastapi" not in contents
+        assert "tool.poetry.scripts" not in contents
