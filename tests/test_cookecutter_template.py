@@ -3,7 +3,7 @@ import shlex
 import os
 import subprocess
 from cookiecutter.utils import rmtree
-
+import pytest
 
 @contextmanager
 def inside_dir(dirpath):
@@ -60,17 +60,13 @@ def test_bake_with_defaults(cookies):
         assert result.exception is None
 
 
-def test_bake_and_run_tests(cookies):
+commands = ["black", "docs", "lint", "safety", "tests"]
+
+
+@pytest.mark.parametrize("command", commands, ids=commands)
+def test_bake_and_run_nox(cookies, command):
     with bake_in_temp_dir(cookies) as result:
         assert result.project_path.is_dir()
         project_path = str(result.project_path)
         assert run_inside_dir("poetry install --no-interaction", project_path) == 0
-        assert run_inside_dir("poetry run nox -rs tests", project_path) == 0
-
-
-def test_bake_and_run_lint(cookies):
-    with bake_in_temp_dir(cookies) as result:
-        assert result.project_path.is_dir()
-        project_path = str(result.project_path)
-        assert run_inside_dir("poetry install --no-interaction", project_path) == 0
-        assert run_inside_dir("poetry run nox -rs lint", project_path) == 0
+        assert run_inside_dir(f"poetry run nox -rs {command}", project_path) == 0
