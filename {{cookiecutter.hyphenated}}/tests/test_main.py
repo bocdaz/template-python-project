@@ -69,5 +69,4 @@ def test_get_token_nonexistant_user(client: TestClient):
     response = client.post("/token", data=login_data)
     tokens = response.json()
     assert response.status_code == 401
-    assert "access_token" not in tokens
-{% endif %}
+    assert "access_token" not in tokens{% endif %}

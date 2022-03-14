@@ -1,0 +1,23 @@
+[tool.poetry]
+authors = [
+  "Lucas Melin <mell@bank-banque-canada.ca>",
+  "Steven Lougheed <lous@bank-banque-canada.ca>",
+  "Marcelo Katayama <katm@bank-banque-canada.ca>",
+]
+description = "A starter project template for new python development"
+name = "template-python-project"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+cookiecutter = "^1.7.3"
+pytest-cookies = "^0.6.1"
+
+[tool.poetry.dev-dependencies]
+black = "22.1.0"
+pytest = "^6.2.3"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
