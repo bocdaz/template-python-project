@@ -69,7 +69,7 @@ def test_bake_and_run_nox(cookies, command):
         assert result.project_path.is_dir()
         project_path = str(result.project_path)
         assert run_inside_dir("poetry install --no-interaction", project_path) == 0
-        assert run_inside_dir(f"poetry run nox -rs {command}", project_path) == 0
+        assert run_inside_dir(f"poetry run nox -s {command}", project_path) == 0
 
 
 def test_bake_fastapi_application(cookies):

@@ -1,11 +1,10 @@
 """Nox sessions."""
-
 import tempfile
 from pathlib import Path
 
 import nox
 
-package = "{{cookiecutter.underscored}}"
+package = "{{cookiecutter.hyphenated}}"
 nox.options.sessions = "lint", "safety", "tests"
 locations = "src", "tests", "noxfile.py"
 
@@ -57,7 +56,7 @@ def lint(session):
         "flake8-bugbear",
         "flake8-comprehensions",
         "flake8-docstrings",
-        "flake8-import-order"
+        "flake8-import-order",
     )
     session.run("isort", "--check", "--diff", "--profile", "black", *args)
     session.run("flake8", *args)

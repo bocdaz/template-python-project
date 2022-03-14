@@ -7,8 +7,7 @@ def hi():
 
 
 if __name__ == "__main__":
-    hi()
-{% elif cookiecutter.project_type == 'FastAPI application' %}"""Main FastAPI application."""
+    hi(){% elif cookiecutter.project_type == 'FastAPI application' %}"""Main FastAPI application."""
 import os
 import sys
 from datetime import timedelta
@@ -123,5 +122,4 @@ def dev_start():
     else:
         uvicorn.run(
             "{{cookiecutter.underscored}}.main:app", host="localhost", port=8000, reload=True
-        )
-{% endif %}
+        ){% endif %}
