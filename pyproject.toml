@@ -7,7 +7,7 @@ authors = [
 description = "A starter project template for new python development"
 name = "template-python-project"
 readme = "README.md"
-version = "0.1.0"
+version = "0.2.0"
 
 [tool.poetry.dependencies]
 python = "^3.7"

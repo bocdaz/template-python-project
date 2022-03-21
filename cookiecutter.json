@@ -1,6 +1,7 @@
 {
 	"full_name": "First Last",
 	"email": "user@bank-banque-canada.ca",
+	"github_owner": "team or username",
 	"project_name": "Template Python Project",
 	"hyphenated": "{{ '-'.join(cookiecutter['project_name'].lower().split()).replace('_', '-') }}",
 	"underscored": "{{ cookiecutter.hyphenated.replace('-', '_') }}",

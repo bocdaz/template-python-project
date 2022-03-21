@@ -11,4 +11,5 @@ Syntax:
 ## [version] - YYYY - MM - DD
 ### Added/Removed/Changed/Deprecated/Fixed/Security
 ```
-## [Unreleased]
+
+## [Latest Changes]
