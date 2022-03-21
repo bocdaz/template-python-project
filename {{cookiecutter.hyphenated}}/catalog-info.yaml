@@ -4,11 +4,11 @@ metadata:
   name: {{ cookiecutter.hyphenated }}
   title: {{ cookiecutter.project_name }}
 
-  description: {{ cookiecutter.project_short_description}}
+  description: {{ cookiecutter.project_short_description }}
   annotations:
     github.com/project-slug: {{ cookiecutter.hyphenated }}
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
-  owner: dev
+  owner: {{ cookiecutter.team }}
   lifecycle: experimental

@@ -18,7 +18,7 @@ Syntax:
 
 ### Added
 
-- catalog-info.yaml so the project can be registered with teh arcoplex-portal
+- Added catalog-info.yaml to allow the project to be registered with the arcoplex-portal
 
 ## [0.1.0] - 2022-10-19
 
